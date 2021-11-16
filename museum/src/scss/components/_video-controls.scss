@@ -1,0 +1,147 @@
+.video__controls {
+  display: flex;
+  align-items: center;
+  width: 1380px;
+  height: 85px;
+  position: relative;
+  @include flex-basic;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: $dark-color;
+  @include for-laptop-up {
+    width: calc(100% - 60px);
+  }
+  @include for-laptop {
+    height: 61px;
+    width: calc(100% - 80px);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include for-tablet-mid {
+    width: calc(100% - 60px);
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 56px;
+  }
+  @include for-phone-mid {
+    width: calc(100% - 40px);
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 54px;
+  }
+}
+
+.controls {
+  &_icon {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &_play {
+    width: 23px;
+    height: 31px;
+    background: url(assets/svg/play.svg);
+    @include for-laptop-down {
+      width: 23px;
+      height: 29px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @include for-phone-mid {
+      width: 14px;
+      height: 18px;
+    }
+  }
+  &_audio {
+    width: 36px;
+    height: 31px;
+    background: url(assets/svg/audio.svg);
+    @include for-laptop-down {
+      width: 26px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @include for-phone-mid {
+      width: 18px;
+      height: 14px;
+    }
+  }
+  &_fullscreen {
+    width: 35px;
+    height: 35px;
+    background: url(assets/svg/fullscreen.svg);
+    @include for-laptop-down {
+      width: 26px;
+      height: 26px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @include for-phone-mid {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.controls_icon:hover {
+  @include gray-filter;
+  @include trans-fast;
+}
+
+.controls_range {
+  height: 8px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+  @include for-laptop {
+    height: 5px;
+  }
+  @include for-phone-mid {
+    height: 4px;
+  }
+}
+
+.controls_range::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: $light-color;
+  @include for-laptop {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+.controls_progress {
+  width: 929px;
+  background: linear-gradient(to right, $main-color 0%, $main-color 54%, $light-gray-color 54%, $light-gray-color 100%);
+  @include for-laptop-up {
+    width: 62%;
+  }
+  @include for-laptop {
+    background: linear-gradient(to right, $main-color 0%, $main-color 40%, $light-gray-color 40%, $light-gray-color 100%);
+  }
+  @include for-tablet {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.controls_volume {
+   width: 153px;
+   background: linear-gradient(to right, $main-color 0%, $main-color 43%, $light-gray-color 43%, $light-gray-color 100%);
+   @include for-laptop {
+    width: 143px;
+    background: linear-gradient(to right, $main-color 0%, $main-color 38%, $light-gray-color 38%, $light-gray-color 100%);
+  }
+  @include for-tablet {
+    width: 486px;
+  }
+  @include for-tablet-down {
+    width: 75%;
+  }
+}

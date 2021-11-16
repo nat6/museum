@@ -1,0 +1,664 @@
+.form-buy {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 1440px;
+  height: 755px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-top: 91px;
+  top:0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  @include trans-slow;
+  @include for-laptop-up {
+    margin-top: 0;
+    width: 1025px;
+    padding-top: 72px;
+    height: 693px;
+  }
+  @include for-laptop-form {
+    width: 590px;
+    height: 100%;
+    overflow-y: scroll;
+    padding-top: 80px;
+  }
+  @include for-phone-up {
+    overflow-x: hidden;
+    width: 420px;
+    padding-top: 80px;
+  }
+}
+#shadow { 
+  position: fixed;
+  width:100%;
+  height:100%;
+  z-index:3;
+  background:#000;
+  opacity: 0.5;
+  left:0;
+  top:0;
+}
+.form-buy__container {
+  position: relative;
+  width: 970px;
+  height: 663px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @include for-laptop-form {
+    flex-direction: column;
+    align-items: center;
+    width: 590px;
+    height: 1350px;
+    padding-bottom: 110px;
+  }
+  @include for-phone-up {
+    width: 420px;
+    height: 1354px;
+    padding-bottom: 380px;
+  }
+}
+
+.form-buy__booking {
+  width: 400px;
+  @include for-laptop-form {
+    width: 530px;
+  }
+  @include for-phone-up {
+    width: 360px;
+  }
+}
+
+.form-buy__logo {
+  width: 85px;
+  height: 41px;
+  background-image: url(assets/svg/logo-gold.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-buy .form-buy__title {
+  font-size: 50px;
+  line-height: 55px;
+  letter-spacing: normal;
+  @include for-phone-up {
+    font-size: 32px;
+    line-height: 35px;
+  }
+}
+
+.form-buy .form-buy__title::after {
+  bottom: -47px;
+}
+
+.form-buy__subtitle {
+  margin-top: 13px;
+  font-size: 18px;
+  line-height: 21px;
+  color: $main-color;
+}
+
+.booking__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 73px;
+  @include for-laptop-form {
+    margin-top: 54px;
+  }
+  // @include for-tablet {
+  //   margin-top: 50px;
+  // }
+}
+
+.booking__input {
+  width: 398px;
+  height: 43px;
+  border: 1px solid $dark-color;
+  margin-bottom: 20px;
+  @include for-laptop-form {
+    width: 528px;
+    height: 43px;
+  }
+  @include for-phone-up {
+    width: 358px;
+  }
+}
+
+.booking__input_narrow {
+  width: 188px;
+  @include for-laptop-form {
+    width: 251px;
+  }
+  @include for-phone-up {
+    width: 358px;
+  }
+}
+
+.booking__amount {
+  padding: 10px 15px 8px 15px;
+  width: 400px;
+  height: 115px;
+  border: 1px solid $dark-color;
+  @include for-laptop-form {
+    width: 530px;
+  }
+}
+
+.booking__amount_title {
+  position: relative;
+  font-family: $title-font;
+  font-size: 18px;
+  line-height: 20px;
+  color: $additional-color;
+  text-transform: capitalize;
+}
+
+.booking__amount_title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: $main-color;
+}
+
+.booking__amount_item {
+  margin-bottom: 10px;
+  @include flex-basic;
+}
+
+.booking__text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.booking__amount_container {
+  margin-top: 20px;
+}
+
+.booking__amount_item .amount__block {
+  width: 105px;
+  height: 25px;
+}
+
+.booking__amount_item .amount__button {
+  width: 35px;
+  height: 25px;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: $dark-color;
+  color: $light-color;
+}
+
+.form-buy__overview {
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-top: 25px;
+  padding-right: 30px;
+  padding-bottom: 26px;
+  width: 530px;
+
+  height: 663px;
+  border: 1px solid black;
+  @include for-laptop-form {
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include for-phone-up {
+    width: 360px;
+    height: 885px;
+  }
+}
+
+.form-buy__close {
+  cursor: pointer;
+  position: absolute;
+  top: -55px;
+  right: -185px;
+  width: 25px;
+  height: 25px;
+  background-image: url(assets/svg/close.svg);
+  @include for-laptop-up {
+    top: -45px;
+    right: 0;
+  }
+  @include for-laptop-form {
+    top: -50px;
+    right: 30px;
+  }
+}
+
+.overview__title {
+  font-family: $text-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  color: #272727;
+}
+
+.overview__subtitle {
+  margin-top: 3px;
+  font-family: $text-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #740C11;
+  opacity: 0.9;
+}
+
+.overview__info {
+  margin-top: 9px;
+  @include for-laptop-form {
+    position: relative;
+  }
+}
+.overview__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.overview__icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  &_date {
+    background-image: url(assets/svg/date.svg);
+  }
+  &_time {
+    background-image: url(assets/svg/time.svg);
+  }
+  &_check {
+    background-image: url(assets/svg/check.svg);
+  }
+}
+.overview__cost {
+  position: relative;
+  margin-top: 28px;
+}
+
+.overview__cost::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $main-color;
+}
+.cost__text,
+.cost__total {
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+}
+
+.cost__item {
+  justify-content: space-between;
+}
+
+.overview__item_container {
+  display: flex;
+}
+.cost__icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url(assets/svg/2.svg);
+}
+.pay__total {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: $text-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+
+  color: #030303;
+}
+.qwerview__pay {
+  @include for-laptop-form {
+    position: relative;
+  }
+}
+.overview__img {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 150px;
+  height: 120px;
+  background-image: url(assets/img/form.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  @include for-laptop-form {
+    top: -75px;
+    right: 0px;
+  }
+  @include for-phone-up {
+    width: 120px;
+    height: 96px;
+  }
+}
+
+.overview__text {
+  font-family: $text-font;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+.booking__input::-webkit-input-placeholder {
+  font-family: $text-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+  padding-left: 45px;
+}
+.input__wrap {
+  position: relative;
+}
+.input__wrap::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+}
+.input__wrap_date::after {
+  background-image: url(assets/svg/date.svg);
+}
+.input__wrap_time::after {
+  background-image: url(assets/svg/time.svg);
+}
+.input__wrap_name::after {
+  background-image: url(assets/svg/name.svg);
+}
+.input__wrap_phone::after {
+  height: 23px;
+  background-image: url(assets/svg/phone.svg);
+}
+.input__wrap_mail::after {
+  background-image: url(assets/svg/mail.svg);
+}
+.input__wrap_ticket::after {
+  background-image: url(assets/svg/ticket.svg);
+}
+
+.booking__input_hidden {
+  display: none;
+}
+
+.input__wrap_date::before,
+.input__wrap_time::before,
+.input__wrap_ticket::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  background-image: url(assets/svg/arrow-form.svg);
+}
+
+.pay__cards {
+  width: 470px;
+  position: relative;
+  @include for-laptop-form {
+    width: 500px;
+  }
+  @include for-phone-up {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.pay__card {
+  position: absolute;
+  border-radius: 5px;
+  @include for-phone-up {
+    position: static;
+  }
+}
+
+.pay__card_front {
+  width: 320px;
+  height: 176px;
+  top: 10px;
+  left: 0;
+  padding: 15px 20px 15px 20px;
+  background-color: #BCBCBC;
+  position: relative;
+  @include for-laptop-form {
+    top: 14px;
+  }
+  @include for-phone-up {
+    width: 290px;
+    height: 179px;
+  }
+}
+.pay__card_back {
+  width: 360px;
+  height: 211px;
+  top: 40px;
+  right: 0;
+  background-color: #939393;
+  @include for-laptop-form {
+    top: 46px;
+  }
+  @include for-phone-up {
+    width: 330px;
+    height: 209px;
+  }
+}
+
+.card__text {
+  margin-bottom: 4px;
+  font-family: $text-font;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+.pay__input {
+  height: 35px;
+  border: none;
+  margin-bottom: 10px;
+  &_number {
+    width: 215px;
+  }
+  &_name {
+    width: 320px;
+    @include for-phone-up {
+      width: 290px;
+    }
+  }
+}
+
+.card__img {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  &_visa {
+    width: 55px;
+    height: 16px;
+    top: 34px;
+    right: 20px;
+    background-image: url(assets/icons/visa.webp);
+  }
+  &_master {
+    width: 53px;
+    height: 32px;
+    top: 65px;
+    right: 20px;
+    background-image: url(assets/icons/master.webp);
+  }
+}
+
+.button__book_container {
+  position: absolute;
+  bottom: 26px;
+  right: 30px;
+  @include for-laptop-form {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 70px;
+  }
+  @include for-phone-up {
+    margin-top: 40px;
+  }
+}
+
+
+.button__book {
+  width: 220px;
+  height: 45px;
+  background-color: $main-color;
+  color: $light-color;
+  border: none;
+  font-family: $text-font;
+  font-size: 22px;
+  line-height: 26px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.button__book:focus {
+  outline: none;
+}
+
+.button__book .circle {
+  position: absolute;
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  z-index: 300;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+.booking__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 45px;
+  font-family: $text-font;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+.pay__select {
+  width: 100px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: $text-font;
+  font-size: 12px;
+  line-height: 14px;
+  padding-left: 10px;
+  color: #161615;
+  margin-right: 12px;
+}
+
+.pay__label {
+  position:relative
+}
+
+.pay__label:after {
+  content:'';
+  width: 28px;
+  height: 35px;
+  background-image: url(assets/svg/arrows-card.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -7px;
+  left: 71px;
+  border-left:1px solid #ddd;
+  position:absolute;
+  pointer-events:none;
+}
+.back__text {
+  font-family: $text-font;
+  font-size: 10px;
+  line-height: 12px;
+  color: #161615;
+}
+.back__title {
+  font-size: 12px;
+  line-height: 14px;
+}
+.back__input {
+  width: 75px;
+  height: 35px;
+}
+
+.back__line {
+  width: 360px;
+  height: 45px;
+  background-color: #161615;
+  margin-top: 25px;
+  @include for-phone-up {
+    width: 330px;
+  }
+}
+
+.pay__card_back {
+  flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+  @include for-phone-up {
+    margin-top: 40px;
+  }
+}
+
+.back__text_small {
+  max-width: 47px;
+}
+.back__content {
+  margin-right: 20px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.back__input {
+  border: none;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}

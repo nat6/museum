@@ -1,0 +1,39 @@
+.logo {
+  width: 199px;
+  height: 33px;
+  display: flex;
+  justify-content: space-between;
+  @include for-phone-up {
+    width: 138px;
+    height: 20px;
+  }
+}
+
+.logo__icon {
+  width: 49px;
+  height: 26px;
+  background-image: url('assets/svg/logo.svg');
+  margin-right: 25px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include for-phone-up {
+    width: 29px;
+    height: 16px;
+    // margin-right: 32px;
+  }
+}
+
+.logo__title {
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 31px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: $light-color;
+  @include for-phone-up {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

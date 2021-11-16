@@ -1,0 +1,118 @@
+.video__slider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 22px;
+  margin-top: 35px;
+  @include flex-center;
+
+	&_container {
+		width: 212px;
+		height: 22px;
+    @include flex-basic;
+    @include for-tablet {
+      width: 200px;
+      height: 20px;
+    }
+    @include for-phone {
+      width: 188px;
+    }
+	}
+
+  @include for-tablet {
+    height: 20px;
+    margin-top: 15px;
+  }
+
+  @include for-tablet-down {
+    margin-top: 35px;
+  }
+}
+
+.video__slider_pagination,
+.video__slider_container .button_right,
+.video__slider_container .button_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background-size: cover;
+  @include for-tablet {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+
+.video__slider_container .button_left,
+.video__slider_container .button_right {
+
+  @include for-phone {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.double__arrow {
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 10px;
+  height: 12px;
+  &_left {
+    background-image: url(assets/svg/arrow-double-left.svg);
+  }
+  &_right {
+    background-image: url(assets/svg/arrow-double-right.svg);
+  }
+  @include for-phone {
+    width: 7px;
+    height: 8px;
+  }
+}
+
+.double__arrow:hover {
+  @include red-filter;
+  @include trans-fast;
+}
+
+.video__slider_pagination {
+  position: relative;
+}
+
+.pagination__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: $dark-gray-color;
+
+  @include for-tablet {
+    width: 10px;
+    height: 10px;
+  }
+  @include for-phone {
+    width: 8px;
+    height: 8px;
+  }
+
+}
+
+.video__slider_pagination:hover .pagination__dot {
+  background-color: $main-color;
+  @include trans-medium;
+}
+
+
+.pagination__dot_first {
+  background-color: $so-dark-gray-color;
+}
