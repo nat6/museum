@@ -1,5 +1,15 @@
 <h1> MUSEUM </h1>
 
+<h2>
+	<a href="https://nat6.github.io/museum/museum/dist/">
+	Deploy
+	</a>
+</h2>
+
+<h3>
+	Info:
+</h3>
+
 <p>
 	<a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/museum/museum-stage1.md">
 	Training project RSSchool
@@ -7,7 +17,7 @@
 </p>
 
 <p>
-	<i>Just a responsive page (1920px - 420px), no JS here</i>
+	Just a responsive page (1920px - 420px), no JS here
 </p>
 
 <p>
